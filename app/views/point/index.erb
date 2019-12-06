@@ -1,0 +1,15 @@
+<p>件数: <%= PlaceGeo.count('id') %></p>
+<p>かかった時間: <%= @duration %> msec</p>
+
+<table>
+  <tr>
+    <th>lat</th>
+    <th>lon</th>
+  </tr>
+  <% @places.each do |p| %>
+    <tr>
+      <td><%= p.lat %></td>
+      <td><%= p.lon %></td>
+    </tr>
+  <% end %>
+</table>
